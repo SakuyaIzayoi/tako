@@ -66,7 +66,12 @@ func main() {
 
 	} else {
 		basepoints = fu * iPow(2, 2+han)
-		handstr = "Regular"
+		if basepoints > 2000 {
+			basepoints = 2000
+			handstr = "Mangan"
+		} else {
+			handstr = "Regular"
+		}
 	}
 
 	fmt.Println("--------------------")
